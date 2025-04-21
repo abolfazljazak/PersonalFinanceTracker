@@ -24,7 +24,7 @@ export class UserRepository {
       });
 
       return user;
-    } catch (error) {
+    } catch (error) { // eslint-disable-line
       throw new InternalServerErrorException(ServerErrorMessage.InternalError)
     }
   }
