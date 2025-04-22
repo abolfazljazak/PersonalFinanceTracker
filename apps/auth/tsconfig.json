@@ -12,7 +12,8 @@
     "baseUrl": "./src",
     "paths": {
       "@modules/*": ["modules/*"],
-      "@painless/*": ["painless/*"]
+      "@painless/*": ["painless/*"],
+      "@config/*": ["config/*"]
     }
   }
 }
