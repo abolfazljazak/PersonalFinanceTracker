@@ -13,14 +13,14 @@ export class UserRepository {
 
   async create(createUserDto: CreateUserDto) {
     try {
-      const { email, password } = createUserDto;
+      const { email, hashPassword } = createUserDto;
       const userExists = this.userExists(email);
       if (userExists)
         throw new ConflictException(ConflictMessage.UserAlreadyExists);
 
       const user = this.prisma.user.create({
         email,
-        password,
+        hashPassword,
       });
 
       return user;
